@@ -3,9 +3,9 @@ container:
 
 test_task:
   node_modules_cache:
-    folder: node_modules
+    folder: "**/node_modules"
     fingerprint_script: cat yarn.lock
-  install_script: yarn install
+    populate_script: yarn install
   bootstrap_script: yarn bootstrap
   build_script: yarn build
   test_script: yarn test
